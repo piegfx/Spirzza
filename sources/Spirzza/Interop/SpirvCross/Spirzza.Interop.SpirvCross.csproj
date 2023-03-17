@@ -1,4 +1,4 @@
-﻿<Project Sdk="Microsoft.NET.Sdk">
+<Project Sdk="Microsoft.NET.Sdk">
 
 	<PropertyGroup>
 		<AllowUnsafeBlocks>true</AllowUnsafeBlocks>
@@ -13,7 +13,7 @@
 		<PackageReference Include="System.Memory" Version="4.5.4" />
 	</ItemGroup>
 
-	<ItemGroup>
+    <!--<ItemGroup>
 		<Content Include="build/Xamarin.iOS10/Spirzza.Interop.SpirvCross.targets">
 			<PackagePath>build/Xamarin.iOS10/Spirzza.Interop.SpirvCross.targets</PackagePath>
 			<Pack>true</Pack>
@@ -30,18 +30,18 @@
 			<PackagePath>build/net40/Spirzza.Interop.SpirvCross.targets</PackagePath>
 			<Pack>true</Pack>
 		</Content>
-	</ItemGroup>
+    </ItemGroup>-->
 
 	<Target Name="BeforePackage" BeforeTargets="AssignTargetPaths">
 		<ItemGroup>
-			<_NativeAssetName Include="win-x86/spirv-cross-c-shared.dll" PackagePath="runtimes/win-x86/native" />
-			<_NativeAssetName Include="win-x64/spirv-cross-c-shared.dll" PackagePath="runtimes/win-x64/native" />
-			<_NativeAssetName Include="linux-x64/libspirv-cross-c-shared.so" PackagePath="runtimes/linux-x64/native" />
-			<_NativeAssetName Include="osx-universal/libspirv-cross-c-shared.dylib" PackagePath="runtimes/osx-universal/native" />
+            <!--<_NativeAssetName Include="win-x86/spirv-cross-c-shared.dll" PackagePath="runtimes/win-x86/native" />
+            <_NativeAssetName Include="win-x64/spirv-cross-c-shared.dll" PackagePath="runtimes/win-x64/native" />-->
+			<_NativeAssetName Include="libspirv-cross-c-shared.so" PackagePath="runtimes/linux-x64/native" />
+            <!--<_NativeAssetName Include="osx-universal/libspirv-cross-c-shared.dylib" PackagePath="runtimes/osx-universal/native" />
 			<_NativeAssetName Include="ios/libspirv-cross_combined.a" PackagePath="build/Xamarin.iOS10/native" />
 			<_NativeAssetName Include="android-arm64-v8a/libspirv-cross-c-shared.so" PackagePath="build/MonoAndroid10/native/arm64-v8a" />
 			<_NativeAssetName Include="android-armeabi-v7a/libspirv-cross-c-shared.so" PackagePath="build/MonoAndroid10/native/armeabi-v7a" />
-			<_NativeAssetName Include="android-x86_64/libspirv-cross-c-shared.so" PackagePath="build/MonoAndroid10/native/x86_64" />
+            <_NativeAssetName Include="android-x86_64/libspirv-cross-c-shared.so" PackagePath="build/MonoAndroid10/native/x86_64" />-->
 
 			<_ExistingAssets Include="@(_NativeAssetName)"  />
 
