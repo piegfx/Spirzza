@@ -1,6 +1,6 @@
 [submodule "submodules/SPIRV-Cross"]
 	path = submodules/SPIRV-Cross
-	url = https://github.com/KhronosGroup/SPIRV-Cross
+	url = https://github.com/piegfx/SPIRV-Cross
 [submodule "submodules/shaderc"]
 	path = submodules/shaderc
 	url = https://github.com/google/shaderc
